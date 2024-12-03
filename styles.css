@@ -3,84 +3,21 @@ body {
   line-height: 1.8;
   margin: 0;
   padding: 0;
-  background: #f8f9fa; /* Softer light background */
-  color: #444; /* Slightly darker text for better contrast */
+  background: #f8f9fa;
+  color: #444;
 }
 
 header {
-  background: #B2BEB5; /* Ash color for the header */
-  color: #fff; /* White text for contrast */
+  background: #B2BEB5;
+  color: #fff;
   padding: 20px;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-  font-size: 2.5rem; /* Larger font size for the title */
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-section {
-  max-width: 800px; /* Limit section width for better readability */
-  margin: 20px auto; /* Center the content */
-  padding: 20px;
-  background: #fff; /* White background for sections */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #0073e6; /* Highlight section titles */
-  border-bottom: 2px solid #ddd; /* Underline the section titles */
-  padding-bottom: 5px;
-}
-
-section ul {
-  list-style-type: none; /* Remove default bullets */
-  padding: 0;
-}
-
-section ul li {
-  margin: 10px 0;
-  padding: 10px;
-  background: #f4f4f9; /* Subtle background for list items */
-  border-left: 4px solid #0073e6; /* Highlighted border */
-  border-radius: 5px;
-}
-
-section ul li a {
-  text-decoration: none;
-  color: #0073e6;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  background: #B2BEB5; /* Match header ash color */
-  color: #fff;
-  font-size: 0.9rem;
-  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: #fff; /* White links in footer */
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #0056b3; /* Darker blue on hover */
-  text-decoration: none;
-}
+header
