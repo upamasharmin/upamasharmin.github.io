@@ -4,122 +4,327 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadia Sharmin Upama</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
   <style>
-    /* Add spacing after section titles and content */
+    /* GLOBAL STYLES */
+    :root {
+      --primary-color: #333;
+      --secondary-color: #666;
+      --accent-color: #007bff; /* Standard link blue */
+      --bg-color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--primary-color);
+      background-color: var(--bg-color);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* LAYOUT CONTAINERS */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* TOP NAVIGATION BAR */
+    header {
+      padding: 20px 0;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #eee; /* Optional: subtle separation */
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-weight: bold;
+      color: #777;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #777;
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    /* MAIN GRID LAYOUT (Sidebar + Content) */
+    .main-wrapper {
+      display: flex;
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+
+    /* LEFT SIDEBAR STYLES */
+    .sidebar {
+      flex: 0 0 250px; /* Fixed width for sidebar */
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h1 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-info {
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .sidebar-links li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-links i {
+      color: #555;
+      width: 20px; /* Aligns icons */
+    }
+
+    .sidebar-links a {
+      color: #555;
+    }
+    
+    .sidebar-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* RIGHT CONTENT STYLES */
+    .content {
+      flex: 1; /* Takes remaining space */
+    }
+
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
+
     section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-align: justify; /* Academic papers often use justified text */
+    }
+
+    /* LIST STYLES FOR PROJECTS/NEWS */
+    .content ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .content li {
       margin-bottom: 10px;
     }
-    section p, section ul {
-      margin-bottom: 10px;
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #eee;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVE DESIGN (For mobile) */
+    @media (max-width: 768px) {
+      .main-wrapper {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .nav-links {
+        display: none; /* Simplify header for mobile or turn into hamburger */
+      }
+      
+      .sidebar-links li {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hi, I'm Sadia Sharmin Upama</h1>
-    <img src="Formal_pic.jpg" alt="Sadia's Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-top: 20px;">
+    <div class="container">
+      <nav>
+        <div class="site-title">Sadia Sharmin Upama's personal page</div>
+        <ul class="nav-links">
+          <li><a href="#about">Biography</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am currently working as a <strong>Data Scientist (Business & Sales Analytics)</strong> at <strong>ACI PLC</strong>, where I explore data to uncover meaningful patterns that support strategic decision-making across business and sales domains. My work involves developing analytical solutions using <strong>Python</strong>, designing efficient data pipelines, performing sales forecasting, and building clear, insightful visualizations.
-    </p>
-    <p>
-      Before joining ACI, I worked as a <strong>Business Intelligence Analyst at EDOTCO Bangladesh</strong>, where I developed full-cycle data projects, automated reporting ecosystems, and solved real operational challenges through data-driven approaches.
-    </p>
-    <p>
-      Beyond industry work, my research interests lie in <strong>Natural Language Processing (NLP), Human–Computer Interaction (HCI), and Multimodal Learning</strong>, as well as the interdisciplinary spaces where these domains intersect. I am particularly passionate about exploring how language, vision, and human-centered design can be combined to build more intuitive, context-aware, and impactful AI systems.
-    </p>
-  </section>
 
-  <section>
-    <h2>Research Interests</h2>
-    <p>
-      My research explores the intersection of <strong>Natural Language Processing, Human–Computer Interaction, and Multimodal Learning</strong>, aiming to design AI systems that understand, adapt to, and interact with humans in more natural and context-aware ways.
-    </p>
-  </section>
+  <div class="container main-wrapper">
+    
+    <aside class="sidebar">
+      <img src="Formal_pic.jpg" alt="Sadia Sharmin Upama" class="profile-img">
+      
+      <h1>Sadia Sharmin Upama</h1>
+      
+      <div class="sidebar-info">
+        <p>Data Scientist</p>
+        <p>ACI PLC</p>
+        <br>
+        <p>Former Business Intelligence Analyst</p>
+        <p>EDOTCO Bangladesh</p>
+      </div>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <a href="https://github.com/upamasharmin/Recommendation_System">Recommendation System</a> - A recommender system for Netflix movie recommendations.
-      </li>
-      <li>
-        <a href="https://github.com/upamasharmin/Face-mask-ditector">Facemask Detector</a> - A project on face mask detection to raise COVID-19 awareness.
-      </li>
-      <li>
-        <a href="https://github.com/upamasharmin/Alarm_Plotting_PG_RH">PGRH Automation Tool</a> - Automation of Portable Generator Run Hour (PGRH) monitoring.
-      </li>
-      <li>
-        <a href="https://github.com/upamasharmin/Llama-Series">Llama Projects</a> - Projects on Llama and Retrieval-Augmented Generation (RAG).
-      </li>
-      <li>
-        <a href="https://github.com/upamasharmin/Federated-Learning-Projects">Federated Learning</a> - Applying FL for attention detection.
-      </li>
-      <li>
-        <a href="https://github.com/upamasharmin/Electricity-Bill-Automation">Electricity Bill Automation</a> - Automating electricity bill generation for telecom customers (Robi, GP, Teletalk, Banglalink).
-      </li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <strong>Title:</strong> "Deep Learning Framework for Student Dropout Prediction in Higher Education Using Feature Selection and 1D CNN"<br>
-        <strong>Venue:</strong> Under Review at IEEE ICCIT 2025
-      </li>
-      <li>
-        <strong>Title:</strong> "Digital Twin Applications in Bangladesh’s Transport Sector: A Systematic Review"<br>
-        <strong>Venue:</strong> Under Review at IEEE ICCIT 2025
-      </li>
-      <li>
-        <strong>Title:</strong> "Voice User Interfaces at the Intersection of Speech Recognition, NLP, and HCI: A Systematic Review"<br>
-        <strong>Venue:</strong> Under Review at IEEE ICCIT 2025
-      </li>
-    </ul>
-  </section>
+      <ul class="sidebar-links">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:upamasharmin57@gmail.com">Email</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/sadia-sharmin-upama-b54a81178/">LinkedIn</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/upamasharmin">GitHub</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <a href="#">Google Scholar</a>
+        </li>
+      </ul>
+    </aside>
 
-  <section>
-    <h2>Skills</h2>
-    <p>
-      <strong>Programming Languages:</strong> Python, SQL, C, C++<br>
-      <strong>Frameworks:</strong> TensorFlow, PyTorch, scikit-learn<br>
-      <strong>Tools:</strong> Power BI, Jupyter Notebooks, GitHub<br>
-      <strong>Research Interests:</strong> NLP, HCI, Multimodal Interaction, Computer Vision
-    </p>
-  </section>
+    <main class="content">
+      
+      <section id="about">
+        <h2>Biography</h2>
+        <p>
+          I am currently working as a <strong>Data Scientist (Business & Sales Analytics)</strong> at <strong>ACI PLC</strong>, where I explore data to uncover meaningful patterns that support strategic decision-making across business and sales domains. My work involves developing analytical solutions using <strong>Python</strong>, designing efficient data pipelines, performing sales forecasting, and building clear, insightful visualizations.
+        </p>
+        <p>
+          Before joining ACI, I worked as a <strong>Business Intelligence Analyst at EDOTCO Bangladesh</strong>, where I developed full-cycle data projects, automated reporting ecosystems, and solved real operational challenges through data-driven approaches.
+        </p>
+        <p>
+          Beyond industry work, my research interests lie in <strong>Natural Language Processing (NLP), Human–Computer Interaction (HCI), and Multimodal Learning</strong>, as well as the interdisciplinary spaces where these domains intersect. I am particularly passionate about exploring how language, vision, and human-centered design can be combined to build more intuitive, context-aware, and impactful AI systems.
+        </p>
+      </section>
 
-  <section>
-    <h2>Current News</h2>
-    <ul>
-      <li>Awarded <strong>SPOT Award</strong> for my contribution to the Q2C billing project</li>
-      <li>Completed an in-house billing solution for government telecom customer <strong>Teletalk</strong></li>
-      <li>Completed an in-house billing solution for telecom customer <strong>Grameenphone (Telenor Group)</strong></li>
-      <li>Awarded <strong>Q1 Value Championship Award</strong> by EDOTCO Bangladesh for creating an insightful Power BI dashboard</li>
-      <li>Awarded <strong>HAKA Challengers</strong> by EDOTCO Bangladesh for PGRH Automation in the Operations division</li>
-    </ul>
-  </section>
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>
+            <strong>"Deep Learning Framework for Student Dropout Prediction in Higher Education Using Feature Selection and 1D CNN"</strong><br>
+            <em>Under Review at IEEE ICCIT 2025</em>
+          </li>
+          <li>
+            <strong>"Digital Twin Applications in Bangladesh’s Transport Sector: A Systematic Review"</strong><br>
+            <em>Under Review at IEEE ICCIT 2025</em>
+          </li>
+          <li>
+            <strong>"Voice User Interfaces at the Intersection of Speech Recognition, NLP, and HCI: A Systematic Review"</strong><br>
+            <em>Under Review at IEEE ICCIT 2025</em>
+          </li>
+        </ul>
+      </section>
 
-  <section>
-    <h2>Contact Me</h2>
-    <p>If you'd like to work together or learn more about me, feel free to reach out!</p>
-    <ul>
-      <li>Email: <a href="mailto:upamasharmin57@gmail.com">upamasharmin57@gmail.com</a></li>
-      <li>Email: <a href="mailto:sharminupama57@gmail.com">sharminupama57@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/upamasharmin">https://github.com/upamasharmin</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/sadia-sharmin-upama-b54a81178/">linkedin.com/in/sadia-sharmin-upama-b54a81178/</a></li>
-    </ul>
-  </section>
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <ul>
+          <li><a href="https://github.com/upamasharmin/Recommendation_System"><strong>Recommendation System</strong></a> - A recommender system for Netflix movie recommendations.</li>
+          <li><a href="https://github.com/upamasharmin/Face-mask-ditector"><strong>Facemask Detector</strong></a> - A project on face mask detection to raise COVID-19 awareness.</li>
+          <li><a href="https://github.com/upamasharmin/Alarm_Plotting_PG_RH"><strong>PGRH Automation Tool</strong></a> - Automation of Portable Generator Run Hour (PGRH) monitoring.</li>
+          <li><a href="https://github.com/upamasharmin/Llama-Series"><strong>Llama Projects</strong></a> - Projects on Llama and Retrieval-Augmented Generation (RAG).</li>
+          <li><a href="https://github.com/upamasharmin/Federated-Learning-Projects"><strong>Federated Learning</strong></a> - Applying FL for attention detection.</li>
+          <li><a href="https://github.com/upamasharmin/Electricity-Bill-Automation"><strong>Electricity Bill Automation</strong></a> - Automating electricity bill generation for telecom customers.</li>
+        </ul>
+      </section>
+
+      <section id="news">
+        <h2>Current News & Awards</h2>
+        <ul>
+          <li>Awarded <strong>SPOT Award</strong> for my contribution to the Q2C billing project.</li>
+          <li>Completed an in-house billing solution for government telecom customer <strong>Teletalk</strong>.</li>
+          <li>Completed an in-house billing solution for telecom customer <strong>Grameenphone (Telenor Group)</strong>.</li>
+          <li>Awarded <strong>Q1 Value Championship Award</strong> by EDOTCO Bangladesh for creating an insightful Power BI dashboard.</li>
+          <li>Awarded <strong>HAKA Challengers</strong> by EDOTCO Bangladesh for PGRH Automation in the Operations division.</li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>
+          <strong>Programming Languages:</strong> Python, SQL, C, C++<br>
+          <strong>Frameworks:</strong> TensorFlow, PyTorch, scikit-learn<br>
+          <strong>Tools:</strong> Power BI, Jupyter Notebooks, GitHub<br>
+          <strong>Research Interests:</strong> NLP, HCI, Multimodal Interaction, Computer Vision
+        </p>
+      </section>
+
+    </main>
+  </div>
 
   <footer>
-    <p>&copy; 2024 Sadia Sharmin Upama. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 Sadia Sharmin Upama. All rights reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
